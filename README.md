@@ -1,20 +1,33 @@
 # Suflenix
 
-To start your Phoenix server:
+## Phoenix導入 (Fedora)
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+1. グローバル環境に以下をインストール
+    - `sudo dnf install nodejs`
+    - `sudo dnf install mysql`
+    - `sudo dnf install mysql-server`
+    - `sudo dnf install erlang`
+    - `sudo dnf install elixir`
+    - `sudo dnf install rebar`
+    - `sudo dnf install inotify-tools`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+1. DBのサービスを有効化＆起動しておく
+    - `sudo systemctl enable mariadb`
+    - `sudo systemctl start mariadb`
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+1. ローカル環境にhexをインストール
+    - `mix local.hex`
 
-## Learn more
+1. ローカル環境にphoenixをインストール
+    - `mix archive.install /path/to/phx_new.ez`
+    - 入手先は以下
+        - https://github.com/phoenixframework/archives
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+----
+
+## プロジェクト作成
+
+1. 起動
+    - `mix phx.server`
+    - ブラウザから `localhost:54000` を確認
+
