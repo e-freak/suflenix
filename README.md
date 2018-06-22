@@ -4,16 +4,13 @@
 
 1. グローバル環境に以下をインストール
     - `sudo dnf install nodejs`
-    - `sudo dnf install mysql`
-    - `sudo dnf install mysql-server`
     - `sudo dnf install erlang`
     - `sudo dnf install elixir`
     - `sudo dnf install rebar`
     - `sudo dnf install inotify-tools`
 
-1. DBのサービスを有効化＆起動しておく
-    - `sudo systemctl enable mariadb`
-    - `sudo systemctl start mariadb`
+1. npmアップデートツールを導入しておく
+    - `npm -g install npm-check-updates`
 
 1. ローカル環境にhexをインストール
     - `mix local.hex`
@@ -25,7 +22,17 @@
 
 ----
 
-## プロジェクト作成
+## 開発の準備
+
+1. クローンしてきたプロジェクトのルートディレクトリに移動
+    - `cd suflenix`
+
+1. 依存パッケージを取得
+    - `mix deps.get`
+    - `cd assets`
+    - `ncu -u`
+    - `npm install`
+    - `cd ..`
 
 1. 起動
     - `mix phx.server`
