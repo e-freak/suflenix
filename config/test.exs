@@ -11,9 +11,9 @@ config :logger, level: :warn
 
 # Configure your database
 config :suflenix, Suflenix.Repo,
-  adapter: Ecto.Adapters.MySQL,
-  username: "root",
+  adapter: Sqlite.Ecto2,
+  username: "d-freak",
   password: "",
-  database: "suflenix_test",
+  database: "suflenix_test.db",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

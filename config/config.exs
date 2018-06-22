@@ -5,6 +5,14 @@
 # is restricted to this project.
 use Mix.Config
 
+config :suflenix, Suflenix.Repo,
+  adapter: Sqlite.Ecto2,
+  database: "suflenix.db",
+  username: "d-freak",
+  password: "",
+  hostname: "localhost"
+
+
 # General application configuration
 config :suflenix,
   ecto_repos: [Suflenix.Repo]
