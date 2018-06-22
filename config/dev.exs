@@ -7,7 +7,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
 config :suflenix, SuflenixWeb.Endpoint,
-  http: [port: 54334],
+  http: [port: 54000],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
