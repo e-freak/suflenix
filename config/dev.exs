@@ -7,7 +7,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
 config :suflenix, SuflenixWeb.Endpoint,
-  http: [port: 54000],
+  http: [port: 54334],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -50,9 +50,9 @@ config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
 config :suflenix, Suflenix.Repo,
-  adapter: Ecto.Adapters.MySQL,
-  username: "root",
+  adapter: Sqlite.Ecto2,
+  username: "d-freak",
   password: "",
-  database: "suflenix",
+  database: "suflenix_dev.db",
   hostname: "localhost",
   pool_size: 10
